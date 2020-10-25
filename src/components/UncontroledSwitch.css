@@ -1,10 +1,10 @@
-.react-switch-checkbox {
+.react-switch-checkbox-uncontrol {
   height: 0px;
   width: 0px;
   visibility: hidden;
 }
 
-.react-switch-label {
+.react-switch-label-uncontrol {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,7 +17,7 @@
   transition: background-color 0.2s;
 }
 
-.react-switch-label .react-switch-button {
+.react-switch-label-uncontrol .react-switch-button-uncontrol {
   content: '';
   position: absolute;
   top: 2px;
@@ -32,10 +32,34 @@
   animation-name: color;
 }
 
-.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+.react-switch-checkbox-uncontrol:checked
+  + .react-switch-label-uncontrol
+  .react-switch-button-uncontrol {
   transform: translateX(115%);
 }
 
-.react-switch-checkbox:disabled + .react-switch-label {
+.react-switch-checkbox-uncontrol:checked + .react-switch-label-uncontrol {
+  background: #06d6a0;
+}
+
+.react-switch-checkbox-un:disabled + .react-switch-label-uncontrol {
   background: #d3d3d3;
+}
+
+@keyframes color {
+  from {
+    background: #fff;
+  }
+
+  30% {
+    background: red;
+  }
+
+  60% {
+    background: green;
+  }
+
+  to {
+    background: #fff;
+  }
 }
