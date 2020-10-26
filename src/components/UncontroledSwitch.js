@@ -9,21 +9,24 @@ class UncontroledSwitch extends Component {
       }
 
     render() {
-
+      
       return (
         <>
         <input
-          className="react-switch-checkbox-uncontrol"
-          id={`react-switch-new-uncontrol`}  
+          className="switch-checkbox-uncontrol"
+         
+          id={`switch-new-uncontrol`}  
           type="checkbox"
           ref={this.check}
-          defaultChecked={false}
+          disabled={this.props.disabled}
         />
         <label
-          className="react-switch-label-uncontrol"
-          htmlFor={`react-switch-new-uncontrol`}
+          className="switch-label-uncontrol"
+          htmlFor={`switch-new-uncontrol`}
+          style={{ background: this.props.color }}
+          //style={{ background: this.check.current.checked && this.props.color }}
         >
-          <span className={`react-switch-button-uncontrol`} />
+          <span className={`switch-button-uncontrol`} />
         </label>
       </>
       );

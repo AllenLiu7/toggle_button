@@ -1,10 +1,10 @@
-.react-switch-checkbox-uncontrol {
+.switch-checkbox-uncontrol {
   height: 0px;
   width: 0px;
   visibility: hidden;
 }
 
-.react-switch-label-uncontrol {
+.switch-label-uncontrol {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,7 +17,7 @@
   transition: background-color 0.2s;
 }
 
-.react-switch-label-uncontrol .react-switch-button-uncontrol {
+.switch-label-uncontrol .switch-button-uncontrol {
   content: '';
   position: absolute;
   top: 2px;
@@ -28,21 +28,17 @@
   transition: 0.2s;
   background: #fff;
   box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.switch-checkbox-uncontrol:checked
+  + .switch-label-uncontrol
+  .switch-button-uncontrol {
+  transform: translateX(115%);
   animation-duration: 3s;
   animation-name: color;
 }
 
-.react-switch-checkbox-uncontrol:checked
-  + .react-switch-label-uncontrol
-  .react-switch-button-uncontrol {
-  transform: translateX(115%);
-}
-
-.react-switch-checkbox-uncontrol:checked + .react-switch-label-uncontrol {
-  background: #06d6a0;
-}
-
-.react-switch-checkbox-un:disabled + .react-switch-label-uncontrol {
+.switch-checkbox-uncontrol:disabled + .switch-label-uncontrol {
   background: #d3d3d3;
 }
 

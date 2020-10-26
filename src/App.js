@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 import Switch from './components/Switch'
 import UncontroledSwitch from './components/UncontroledSwitch';
 
@@ -13,10 +12,10 @@ function App() {
     <Switch 
       isOn={value}
       handleToggle={() => {setValue(!value)}}
-      onColor={'#06D6A0'}
+      color={'#1E90FF'}
       disabled={false}
   />
-    <UncontroledSwitch/>
+    <UncontroledSwitch color={'#1E90FF'} disabled={false}/>
      
     </div>
   );
